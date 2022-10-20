@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  Guessing King </title>
+<style>
+body{background:url("questions.gif") no-repeat;background-size: 1650px 600px;}
+span{
+color:red;
+}
+button{
+background-color:blue;
+color:white;
+font-size:23px
+}
+</style>
+</head>
+<body style="background-color:aqua">
+  <h1 style="font-size:45px;text-shadow: 0.2em 0.5em 0.1em #ddd, -0.3em 0.1em 0.1em #aaa, 0.4em -0.3em 0.1em #888"><b><i>GUESSING KING!!!</b></i></h1>
+  <div style="text-align:center;font-family:MERRIWEATHER;font-size:55px;color:#151B54"><b><i>
+  <img src="counts.gif" width="250px" height="250px" alt="Image Here" style="position:fixed;left:0">
+  <br>
+  <p>A number between 1 and 100. Can you guess what it is?</p>
+  <p id="c">YOU HAVE <span id="s">5</span> CHANCES LEFT!!!</p>
+  
+  <form>
+    <label>WHAT'S YOUR GUESS??</label>
+    <input type="number" id="guess" style="width:100px;height:50px" onfocus="this.value=''" >
+    <button type="button" id="button" onclick="checkGuess();counter()"><b>Check My Guess</b></button>
+    <button onclick="window.location.reload();"><b>PLAY AGAIN</b></button>
+  </form>
+  <p id="p"></p>
+    <p id="n"></p>
+  </div>
+  <script>
+  var count=0; 
+  var val=4;
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    function checkGuess() {
+	  var myGuess = document.getElementById("guess").value;
+	  if(myGuess==""){
+	  document.getElementById("p").innerHTML="YOU HAVE NOT ENTERED ANY NUMBER ..... ";
+	  alert("PLEASE ENTER THE NUMBER !!!");
+	  }
+	 
+      else if (myGuess == randomNumber) {
+       document.getElementById("p").innerHTML= "Correct Guess!!! The guessed number is : "+"<span>"+randomNumber+"</span>";
+	   document.getElementById("button").disabled=true;
+      }
+	  
+	  else if (myGuess == randomNumber-5||myGuess == randomNumber-4||myGuess == randomNumber-3||myGuess == randomNumber-2||myGuess == randomNumber-1){
+       document.getElementById("p").innerHTML= "Your guess was " + "<span>"+myGuess+"</span>" + ". A little low but you are too close . Try Again!";
+      } 
+	  
+	  else if (myGuess ==randomNumber+5||myGuess ==randomNumber+4||myGuess ==randomNumber+3||myGuess ==randomNumber+2||myGuess ==randomNumber+1) {
+        document.getElementById("p").innerHTML= "Your guess was " + "<span>"+myGuess+"</span>" + ". A little high but you are too close . Try Again!";
+      } 
+	  
+	  else if (myGuess > randomNumber) {
+        document.getElementById("p").innerHTML= "Your guess was " + "<span>"+myGuess+"</span>" + ". That's too high. Try Again!";
+      }
+	  
+	  
+	  else if (myGuess < randomNumber) {
+       document.getElementById("p").innerHTML= "Your guess was " + "<span>"+myGuess+"</span>" + ". That's too low. Try Again!";
+
+     }
+	 
+   }
+   
+   function counter(){
+   var myGuess = document.getElementById("guess").value;
+   if(myGuess!=""){
+   count++;
+   val--;
+   }
+   document.getElementById("s").innerHTML=val+1;
+   if(val==-1&&myGuess != randomNumber){
+   document.getElementById("p").innerHTML="Game Over The guessed number is : "+randomNumber;
+   document.getElementById("button").disabled=true;
+   }
+   document.getElementById("guess").value="";
+   
+}
+   
+</script>
+</body>
+</html>

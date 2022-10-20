@@ -1,0 +1,55 @@
+body{
+background-image:url("background.gif");
+  background-repeat: repeat-y;
+  background-size: 1600px 900px;
+}
+
+img{
+border-radius:75px
+	
+}
+
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: black;
+  border: solid 5px #c3c3c3;
+  color:white;
+  font-family:Algerian;
+  font-size:40px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+#para1{
+font-family:Algerian;
+color:orange;
+font-size:65px;
+text-shadow: 9px 9px 8px red;
+}
+
+#div1{
+text-align:center;
+margin:50px auto
+}
+
+#p1{
+font-family:Algerian;
+color:white;
+text-align:center;
+font-size:25px
+}
+
+#para2{
+color:white;
+font-size:55px
+}
+
+#button2{
+font-family:Algerian;	
+font-size:45px;	
+}

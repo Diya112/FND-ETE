@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Text Adventure Game</title>
+<link rel="stylesheet" href="styles.css"></link>
+<style>
+#s4{
+display:inline-block;
+background:linear-gradient(#ffecd2,#fcb69f);
+width:750px;
+height:500px;
+margin-top:25px;
+margin-left:45px;
+border-radius:75px;
+font-size:35px;
+font-family:Kristen ITC
+}
+#s1{
+display:block;
+background:linear-gradient(#fdfcfb,#e2d1c3);
+border-radius:75px;
+font-size:58px;
+font-family:Forte;
+width:750px;
+height:100px;
+color: orange;
+}
+
+#s2{
+display:block;
+background:linear-gradient(#fdfcfb,#e2d1c3);
+border-radius:75px;
+font-size:58px;
+font-family:Forte;
+position:fixed;
+left:10px;
+bottom:70px;
+width:250px;
+height:550px;
+color: orange
+}
+
+#s3{
+display:block;
+background:linear-gradient(#fdfcfb,#e2d1c3);
+border-radius:75px;
+font-size:58px;
+font-family:Forte;
+position:fixed;
+right:10px;
+bottom:70px;
+width:250px;
+height:550px;
+color: orange
+}
+
+#s5,#s6,#s7{
+font-size:40px;
+font-family:Forte;
+}
+
+span{
+font-family:Arial;
+}
+
+</style>
+</head>
+<body>
+<button type="button" class="btn btn-danger"><a href="Text adventure.html" style="color:white;text-decoration:none;font-size:25px;font-family:Algerian">END GAME</a></button>
+<center><div id="s1"><b>ACCEPT OR NOT: THE END</b></div></center>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="background:linear-gradient(#fdfcfb,#e2d1c3)">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="s5">GAME SUCCESSFULLY COMPLETED!!!</h4>
+        </div>
+        <div class="modal-body" style="background:linear-gradient(#ffecd2,#fcb69f)">
+          <center><img src="i35.png" width="450px" height="350px"></center>
+		  <p id="s6">Whatever you choose, will decide your future as an insurance agent or a police officer. Because at the end its just a choice that makes all the difference. Thank you for playing.</p> 
+        </div>
+        <div class="modal-footer" id="s7" style="background:linear-gradient(#fdfcfb,#e2d1c3)">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color:green;text-decoration:none;color:white">GO BACK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<center>
+<div id="s4">
+<center><img src="i34.png" width="600px" height="290px" alt="image Here"></center>
+<br>
+<b><i>The cops are impressed.They all agreed that you would make a great cop and you should apply for the police academy.
+</i></b></div>
+</center>
+<div id="s2"><b>
+<p style="margin-top:25px">
+SHOULD YOU<br> 
+FOLLOW THE<span><i>I</i></span>R<br> 
+ADV<span><i>I</i></span>CE ?
+</p>
+</div>
+
+<div id="s3"><b>
+<p style="margin-top:25px">
+OR ST<span><i>I</i></span>CK TO<br> 
+WHAT YOU<br>
+HAVE GOT ? 
+</p>
+</div>
+<br><br>
+<center><button type="button" class="btn btn-warning btn-block" id="b2" data-toggle="modal" data-target="#myModal" style="color:white;text-decoration:none;font-family:Algerian;font-size:25px">CONGRATULATIONS!!! YOU HAVE COMPLETED THIS GAME SUCCESSFULLY. CLICK HERE.....</button></center>
+</html>
+

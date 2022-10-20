@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<title>Text Adventure Game</title>
+<link rel="stylesheet" href="styles.css"></link>
+
+<style>
+#para2,#button,#img2,#bt2{
+display:none
+}
+
+#bt2{
+font-size:25px;
+font-family:Algerian;
+position:absolute;
+left:0;
+top:80px;
+display:none
+}
+
+</style>
+
+</head>
+<body>
+<button type="button" class="btn btn-danger"><a href="Text adventure.html" style="color:white;text-decoration:none;font-size:25px;font-family:Algerian">QUIT GAME</a></button>
+
+<button type="button" class="btn btn-primary" id="bt2"><a href="third.html" style="color:white;text-decoration:none;">CONTINUE GAME</a></button>
+<div id="div1">
+<p id="para1"><b><i>Do you believe the guy?</i></b></p>
+<button type="button" class="btn btn-success" onclick="fun1()" id="btn1" style="width:100px;height:50px;font-size:20px;margin:20px;text-shadow: 3px 3px 8px white"><b>YES</b></button>
+<button type="button" class="btn btn-danger" onclick="fun2()" id="btn2" style="width:100px;height:50px;font-size:20px;margin:20px;text-shadow: 3px 3px 8px white"><b>NO</b></button>
+
+<p id="para2"><b><i>You Lost!!!</i></b></p>
+
+<center><img src="i2.png" width="400px" height="400px" alt="image Here" id="img1"></center>
+<center><img src="i5.png" width="400px" height="400px" alt="image Here" id="img2"></center>
+</div>
+
+<button type="button" id="button" class="btn btn-warning" style="width:500px;height:200px;margin-left:500px"><a href="Text adventure.html" style="color:white;font-size:65px;text-decoration:none;font-family:Algerian">PLAY AGAIN</a></button>
+
+
+<script>
+function fun1(){
+alert("Shouldn't have believed the guy !!!");
+document.getElementById("para2").style.display = "block";
+document.getElementById("img1").style.display = "none";
+document.getElementById("button").style.display = "block";
+document.getElementById("btn2").disabled = true;
+}
+
+function fun2(){
+alert("Great!!! Look at the hill. The car wouldn't roll down without a little push.");
+document.getElementById('img1').style.display="none";
+document.getElementById('img2').style.display="block";
+document.getElementById("btn1").disabled = true;
+document.getElementById("bt2").style.display = "block";
+}
+
+
+</script>
+</body>
+</html>

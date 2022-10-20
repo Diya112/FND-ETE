@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<title>Text Adventure Game</title>
+<link rel="stylesheet" href="styles.css"></link>
+
+<style>
+#image,#para2,#button,#b2{
+display:none
+}
+h1{
+font-family:Algerian;
+color:white;
+text-align:center;
+font-size:55px
+}
+#b2{
+font-size:25px;
+font-family:Algerian;
+position:absolute;
+left:0;
+top:80px;
+display:none
+}
+</style>
+
+</head>
+<body>
+<button type="button" class="btn btn-danger"><a href="Text adventure.html" style="color:white;text-decoration:none;font-size:25px;font-family:Algerian">QUIT GAME</a></button>
+<button type="button" class="btn btn-primary" id="b2"><a href="fifth.html" style="color:white;text-decoration:none;">CONTINUE GAME</a></button>
+
+
+
+<h1>STEP 1: ESCAPE</h1>
+<div id="div1">
+<p id="p1">You found your phone but there is no Signal .Then You see a code lock at the door. With the clue given you have to solve the four-digit code to escape the House!!!</p>
+<p id="para1"><b><i>TYPE THE CORRECT CODE : </i></b></p>
+<input type="text" id="input">
+<button type="button" class="btn btn-success" onclick="check()" id="btn" style="width:100px;height:50px;font-size:20px;margin:20px;text-shadow: 3px 3px 8px white"><b>OK</b></button>
+<p id="para2"><b><i>You Lost!!!</i></b></p>
+<img src="i9.png" width="400px" height="400px" alt="image Here" id="image1" style="margin:20px">
+<img src="i10.png" width="400px" height="400px" alt="image Here"id="image2">
+<center><img src="i11.png" width="500px" height="500px" alt="image Here"id="image"></center>
+</div>
+
+<button type="button" id="button" class="btn btn-warning" style="width:500px;height:200px;margin-left:500px"><a href="Text adventure.html" style="color:white;font-size:65px;text-decoration:none;font-family:Algerian">PLAY AGAIN</a></button>
+
+<script>
+function check(){
+
+var x=document.getElementById("input").value;
+
+if(x==""){
+alert("YOU HAVEN'T TYPED ANY CODE TO OPEN THE DOOR!!!");
+}
+
+else if (x=="6108"){
+alert("Good Job!! The Digits stand for the number of unique Limbs!");
+document.getElementById("b2").style.display = "inline";
+document.getElementById("image1").style.display = "none";
+document.getElementById("image2").style.display = "none";
+document.getElementById("image").style.display = "inline";
+document.getElementById("input").style.display = "none";
+document.getElementById("btn").style.display = "none";
+document.getElementById("p1").style.display = "none";
+document.getElementById("para1").style.display = "none";
+}
+
+else{
+alert("Your Code is Incorrect!!!");
+document.getElementById("para2").style.display = "block";
+document.getElementById("button").style.display = "block";
+document.getElementById("image1").style.display = "none";
+document.getElementById("image2").style.display = "none";
+document.getElementById("input").style.display = "none";
+document.getElementById("btn").style.display = "none";
+}
+
+}
+
+</script>
+</body>
+</html>

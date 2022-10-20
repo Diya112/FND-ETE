@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Text Adventure Game</title>
+<link rel="stylesheet" href="styles.css"></link>
+
+<style>
+#para2,#button,#b2,#image3{
+display:none
+}
+h1{
+font-family:Algerian;
+color:white;
+text-align:center;
+font-size:55px
+}
+</style>
+
+</head>
+<body>
+<button type="button" class="btn btn-danger"><a href="Text adventure.html" style="color:white;text-decoration:none;font-size:25px;font-family:Algerian">QUIT GAME</a></button>
+<h1>STEP 3: REMEMBER THE PASSWORD!!!</h1>
+<div id="div1">
+<p id="p1">WAIT! WHAT WAS YOUR PHONE'S PASSWORD? YOU GOT A PIECE OF PAPER IN YOUR SHIRT'S POCKET AND FOUND THE CLUE TO REMEMBER YOUR PHONE'S PASSWORD .</p>
+<p id="para1"><b><i>WHAT IS THE PASSWORD? </i></b></p>
+
+<center><input type="text" id="inp"></center>
+<center><button type="button" class="btn btn-success" onclick="check()" id="btn" style="font-size:20px;text-shadow: 3px 3px 8px white;margin-top:5px"><b>CHECK THE PASSWORD</b></button></center>
+<p id="para2"><b><i>You Lost!!!</i></b></p>
+<img src="i16.png" width="350px" height="350px" alt="image Here" id="image1" align="left">
+<img src="i17.png" width="350px" height="350px" alt="image Here" id="image3" align="right">
+</div>
+<br>
+<button type="button" class="btn btn-warning btn-block" id="b2"><a href="eigth.html" style="color:white;text-decoration:none;font-family:Algerian;font-size:45px">PHONE UNLOCKED!!! CLICK HERE TO CONTINUE.....</a></button>
+<button type="button" id="button" class="btn btn-warning" style="width:500px;height:200px;margin-left:500px"><a href="Text adventure.html" style="color:white;font-size:65px;text-decoration:none;font-family:Algerian">PLAY AGAIN</a></button>
+
+<script>
+
+
+
+function check(){
+
+var x=document.getElementById("inp").value;
+
+if(x==""){
+alert("YOU HAVEN'T TYPED ANY PASSWORD TO UNLOCK THE PHONE!!!");
+}
+
+else if (x=="6423"){
+alert("Good Job!!!");
+document.getElementById("b2").style.display = "inline";
+document.getElementById("image3").style.display = "block";
+document.getElementById("inp").style.display = "none";
+document.getElementById("btn").style.display = "none";
+document.getElementById("p1").style.display = "none";
+document.getElementById("para1").style.display = "none";
+}
+
+else{
+alert("Your PASSWORD is Incorrect!!!");
+document.getElementById("para2").style.display = "block";
+document.getElementById("button").style.display = "block";
+document.getElementById("image1").style.display = "none";
+document.getElementById("inp").style.display = "none";
+document.getElementById("btn").style.display = "none";
+}
+
+}
+
+</script>
+</body>
+</html>

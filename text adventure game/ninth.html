@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Text Adventure Game</title>
+<link rel="stylesheet" href="styles.css"></link>
+
+<style>
+#i2,#para2,#button,#b2{
+display:none
+}
+h1{
+font-family:Algerian;
+color:white;
+text-align:center;
+font-size:55px
+}
+</style>
+
+</head>
+<body>
+<button type="button" class="btn btn-danger"><a href="Text adventure.html" style="color:white;text-decoration:none;font-size:25px;font-family:Algerian">QUIT GAME</a></button>
+<h1>STEP 4:SUSPICIOUS GAS STATION</h1>
+<div id="div1">
+<p id="p1">THE CAR STOPS AT A GAS STATION. THE PERSON THERE CALLS THE CAR OWNER AS DONNY AS ASKS HIM IF HE WANTS THE CAR TO HAVE FULL TANK FILLED. THE CAR OWNER NODS AND SAYS HE HAS TO DRIVE LONG DISTANCE AHEAD. YOU START TO GET SUSPICIOUS. WHY?</p>
+<p id="para1"><b><i>WHY ARE YOU GETTING SUSPICIOUS?</i></b></p>
+<button type="button" class="btn btn-success" onclick="fun1()" id="btn1" style="font-size:20px;margin-left:220px;text-shadow: 3px 3px 8px white"><b>Nothing Suspicious its just because you have suffered a lot and hesisiate to believe in anyone.</b></button><br><br>
+<button type="button" class="btn btn-success" onclick="fun2()" id="btn2" style="font-size:20px;text-shadow: 3px 3px 8px white"><b>THE FUEL DISPENSER GUY SEEMS SUSPICIOUS</b></button><br><br>
+<button type="button" class="btn btn-success" onclick="fun3()" id="btn3" style="font-size:20px;text-shadow: 3px 3px 8px white"><b>THE CAR OWNER SEEMS SUSPICIOUS</b></button><br><br>
+<img src="i22.png" width="400px" height="350px" alt="image Here" id="i1" align="left" style="position:absolute;bottom:3px;left:0">
+<img src="i24.png" width="400px" height="350px" alt="image Here"id="i2" align="right" style="position:absolute;right:0;bottom:3px">
+<p id="para2"><b><i>You Lost!!!</i></b></p>
+</div>
+
+<button type="button" class="btn btn-warning btn-block" id="b2"><a href="tenth.html" style="color:white;text-decoration:none;font-family:Algerian;font-size:45px">CLICK HERE TO CONTINUE...</a></button>
+<button type="button" id="button" class="btn btn-warning" style="width:500px;height:200px;margin-left:500px"><a href="Text adventure.html" style="color:white;font-size:65px;text-decoration:none;font-family:Algerian">PLAY AGAIN</a></button>
+
+<script>
+function fun1(){
+alert("There is definitely something suspicious going on here!!!");
+document.getElementById("para2").style.display = "block";
+document.getElementById("i1").style.display = "none";
+document.getElementById("button").style.display = "block";
+var obj1 = document.getElementById("btn1");
+obj1.remove();
+var obj2 = document.getElementById("btn2");
+obj2.remove();
+var obj3 = document.getElementById("btn3");
+obj3.remove();
+var obj4 = document.getElementById("para1");
+obj4.remove();
+}
+
+function fun2(){
+alert("Nope, The innocent fuel dispenser guy not at all seems suspicious!!!");
+document.getElementById("para2").style.display = "block";
+document.getElementById("i1").style.display = "none";
+document.getElementById("button").style.display = "block";
+var obj1 = document.getElementById("btn1");
+obj1.remove();
+var obj2 = document.getElementById("btn2");
+obj2.remove();
+var obj3 = document.getElementById("btn3");
+obj3.remove();
+var obj4 = document.getElementById("para1");
+obj4.remove();
+}
+
+
+function fun3(){
+alert("Great Observation!!!");
+document.getElementById("i1").src = "i23.png";
+document.getElementById("i2").style.display = "block";
+document.getElementById("b2").style.display = "block";
+var obj1 = document.getElementById("btn1");
+obj1.remove();
+var obj2 = document.getElementById("btn2");
+obj2.remove();
+var obj3 = document.getElementById("btn3");
+obj3.remove();
+var obj4 = document.getElementById("para1");
+obj4.remove();
+}
+</script>
+</body>
+</html>
+

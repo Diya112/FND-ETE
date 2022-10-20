@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<title>Text Adventure Game</title>
+<link rel="stylesheet" href="styles.css"></link>
+</head>
+<body>
+<div id="flip">Click here to read the story of your Adventure</div>
+<div id="panel">
+You are Ben,an insurance agent.You got call from your client.
+<center><img src="i1.png" width="500px" height="500px" alt="image Here"></center>
+Then you sped over to the accident site.
+<center><img src="i2.png" width="500px" height="500px" alt="image Here"></center>
+There a person replies that he and his friends were gonna have a picnic there and he was about 30 minutes early.
+<center><img src="i3.png" width="500px" height="500px" alt="image Here"></center>
+He parked his car and got out to look around . Suddenly his car rolled down into the river by itself.
+<center><img src="i4.png" width="500px" height="500px" alt="image Here"></center>
+<br><br>
+<button type="button" class="btn btn-outline-info"><a href="second.html" style="color:white;text-decoration:none;font-size:60px;font-family:Algerian;margin-left:50px">MOVE AHEAD</a></button>
+<button type="button" class="btn btn-outline-info"><a href="GAMER'S PARADISE/Gamer's Paradise.html" style="color:white;text-decoration:none;font-size:60px;font-family:Algerian;;margin-left:50px">QUIT GAME</a></button>
+</div>
+
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+</body>
+</html>

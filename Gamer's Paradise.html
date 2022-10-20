@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GAMER'S PARADISE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+<style>
+*{
+font-weight:bold;
+cursor:pointer
+}
+
+
+body{
+background:url("game.gif");
+overflow-x:hidden
+}
+
+.card{
+margin-top:45px;
+}
+
+.images {
+	border-radius: 100%;
+	animation-name: rotating;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rotating {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotateY(360deg);
+	}
+	75% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+
+.Slides{
+  position: relative; 
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #D93250;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 2.5s ease;
+}
+
+.Slides:hover .overlay {
+  width: 100%;
+}
+
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-family:Kristen ITC;
+  font-weight:bold;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+h4{
+font-family:Verdana;
+color: white;
+text-shadow: 5px 5px 10px #000000;
+font-size:45px
+}
+
+p{
+font-family:Verdana;
+text-shadow: 2px 2px 9px #000000;
+font-size:45px;
+ 
+}
+
+
+</style>
+</head>
+<body>
+
+
+<img src="Gamers.jfif" alt="Card image" width="150px" height="100px" style="border-radius:75%">
+
+<center><img id="image" src="Rocks.gif" width="700px" height="500px" style="border-radius:50%;z-index:2;position:relative"></center>
+<center><img src="Games.jfif" width="700px" height="500px" class="images" style="border-radius:50%;position: absolute;left: 0px;top: 0px;z-index: -1"></center>
+<img src="Games.jfif" width="700px" height="500px" class="images" style="border-radius:50%;position:absolute;right:0px;top:0px" align="right">
+
+<center><p><mark><b><i>GAMER'S PARADISE <br> WELCOME TO THE WORLD OF GAMING.<br> GIVE YOURSELF FEW MOMENTS OF ENJOYMENT!!!</b></i></mark></p></center>
+
+<div class="container">
+
+<div class="card-deck"> 
+  <div class="card" style="background-color:grey">
+    <div class="Slides">
+    <img class="card-img-top" src="Paper.gif" alt="Card image" width="500px" height="250px" id="z1">
+	<div class="overlay">
+    <div class="text">"SAY HELLO TO THE CHILD IN YOU!!!"</div>
+    </div>
+	</div>
+     <div class="card-body" style="background-color:lightgrey">
+      <h4 class="card-title"><b><i>ROCK PAPER SCISSORS</b></i></h4>
+      <p class="card-text"></p>
+      <a href="ROCK PAPER SCISSORS/Rock It.html" target="_blank" class="btn btn-primary" onmouseover="document.getElementById('z1').src='faces.gif'" onmouseout="document.getElementById('z1').src='Paper.gif'"><b>PLAY GAME</b></a>
+    </div>
+	</div>
+    
+  <div class="card" style="background-color:grey">
+    <div class="Slides">
+    <img class="card-img-top" src="forest.gif" alt="Card image" width="500px" height="250px" id="z2">
+	<div class="overlay">
+    <div class="text">"DESTINY IS NOT THE MATTER OF CHANCE;<br>IT IS A MATTER OF CHOICE!!!"</div>
+    </div>
+	</div>
+    <div class="card-body" style="background-color:lightgrey">
+      <h4 class="card-title"><b><i>THE SURVIVAL CHOICE</b></i></h4>
+      <p class="card-text"></p>
+      <a href="text adventure game/Text adventure.html" target="_blank" class="btn btn-primary" onmouseover="document.getElementById('z2').src='faces.gif'" onmouseout="document.getElementById('z2').src='forest.gif'"><b>PLAY GAME</b></a>
+    </div>
+	</div>
+  
+	
+</div>
+	
+  <div class="card-deck">
+  
+  <div class="card" style="background-color:grey">
+    <div class="Slides">
+    <img class="card-img-top" src="Tic.gif" alt="Card image" width="500px" height="250px"id="z3">
+	<div class="overlay">
+    <div class="text">"ON THE GO<br>TIC-TAC-TOE!!!"</div>
+    </div>
+	</div>
+    <div class="card-body"style="background-color:lightgrey">
+      <h4 class="card-title"><b><i>TIC TAC TOE</b></i></h4>
+      <p class="card-text"></p>
+      <a href="Tic Tac Toe Game/Tic Tac Toe.html" target="_blank" class="btn btn-primary" onmouseover="document.getElementById('z3').src='faces.gif'" onmouseout="document.getElementById('z3').src='Tic.gif'"><b>PLAY GAME</b></a>
+    </div>
+	</div>
+   
+     <div class="card" style="background-color:white">
+	 <div class="Slides">
+    <img class="card-img-top" src="Guess.gif" alt="Card image" width="500px" height="250px" id="z4">
+	<div class="overlay">
+    <div class="text">"GUESS ME IF YOU CAN!!!"</div>
+    </div>
+	</div>
+    <div class="card-body" style="background-color:lightgrey">
+      <h4 class="card-title"><b><i>GUESSING KING</b></i></h4>
+      <p class="card-text"></p>
+      <a href="Guessing King/Guess.html" target="_blank" class="btn btn-primary" onmouseover="document.getElementById('z4').src='faces.gif'" onmouseout="document.getElementById('z4').src='Guess.gif'"><b>PLAY GAME</b></a>
+    </div>
+	</div>
+ 
+</div>
+	
+<div class="card-deck">
+	<div class="card" style="background-color:grey">
+    <div class="Slides">
+    <img class="card-img-top" src="Snakes.gif" alt="Card image" width="500px" height="250px"id="z7">
+	<div class="overlay">
+    <div class="text">"THE MORE IT EATS;<br>THE LONGER IT BECOMES!!!"</div>
+    </div>
+	</div>
+    <div class="card-body" style="background-color:lightgrey">
+      <h4 class="card-title"><b><i>SNAKE IT UP</b></i></h4>
+      <p class="card-text"></p>
+      <a href="SNAKE IT UP/Snake It Up.html" target="_blank" class="btn btn-primary" onmouseover="document.getElementById('z7').src='faces.gif'" onmouseout="document.getElementById('z7').src='Snakes.gif'"><b>PLAY GAME</b></a>
+    </div>
+	</div>
+	
+	<div class="card" style="background-color:grey">
+	<div class="Slides">
+    <img class="card-img-top" src="Accelerator.jpg" alt="Card image" width="500px" height="250px" id="z5">
+	<div class="overlay">
+    <div class="text">"THE GREATER THE OBSTACLE;<br>THE MORE GLORY IN OVERCOMING IT!!!"</div>
+    </div>
+	</div>
+    <div class="card-body" style="background-color:lightgrey">
+      <h4 class="card-title"><b><i>ACCELERA8OR</b></i></h4>
+      <p class="card-text"></p>
+      <a href="Accelera8or Game/Accelera8or1.html" target="_blank" class="btn btn-primary" onmouseover="document.getElementById('z5').src='faces.gif'" onmouseout="document.getElementById('z5').src='Accelerator.jpg'"><b>PLAY GAME</b></a>
+    </div>
+	</div>
+	
+</div>  
+
+<div class="card-deck">
+
+  <div class="card">
+    <div class="Slides">
+    <img class="card-img-top" src="Ping-Pong.gif" alt="Card image" style="width:100%;height:250px" id="z6">
+	<div class="overlay">
+    <div class="text">"ITS JUST FOR THE BALL!!!"</div>
+    </div>
+	</div>
+    <div class="card-body" style="background-color:lightgrey">
+      <h4 class="card-title"><b><i>PING PONG GAME</b></i></h4>
+      <p class="card-text"></p>
+   <a href="PING PONG GAME/Ping Pong1.html" target="_blank" class="btn btn-primary" onmouseover="document.getElementById('z6').src='faces.gif'" onmouseout="document.getElementById('z6').src='Ping-Pong.gif'"><b>PLAY GAME</b></a>    </div>
+	</div>
+	
+	<div class="card">
+    <div class="Slides">
+    <img class="card-img-top" src="Dices.gif" alt="Card image" style="width:100%;height:250px" id="z8">
+	<div class="overlay">
+    <div class="text">"LIFE IS LIKE A DICE; <br> YOU NEVER KNOW WHAT COMES NEXT!!!"</div>
+    </div>
+	</div>
+    <div class="card-body" style="background-color:lightgrey">
+      <h4 class="card-title"><b><i>ROLL THE DICE GAME</b></i></h4>
+      <p class="card-text"></p>
+      <a href="ROLL THE DICE GAME/Roll.html" target="_blank" class="btn btn-primary" onmouseover="document.getElementById('z8').src='faces.gif'" onmouseout="document.getElementById('z8').src='Dices.gif'"><b>PLAY GAME</b></a>
+    </div>
+	</div>
+	
+  </div>
+
+ 
+</div>   
+<script>	
+var Img = document.getElementById("image");
+var Array=["Games.jfif","trees.gif","Tic.gif","Snakes.gif","Rocks.gif"];
+var Index = 0;
+function change(){
+  Img.setAttribute("src",Array[Index]);
+  Index++;
+  if (Index >=Array.length) {
+    Index = 0;
+  }
+}
+setInterval(change,3000);
+
+
+
+</script>
+</body>
+</html>

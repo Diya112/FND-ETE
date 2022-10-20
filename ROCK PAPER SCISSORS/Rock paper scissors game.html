@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Rock,Paper,Scissors</title>
+
+<style>
+body{background:url("backg.gif") repeat}
+.info {
+      border-color: #2196F3;
+    }
+	.info:hover {
+     background: pink;
+     color: white;
+    }
+	.btn {
+  border: 2px solid black;
+  background-color: black;
+  color: black;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-size:25px;
+  }
+</style>
+
+</head>
+
+
+<body>
+<h1 style="font-family:Algerian;font-size:50px;text-shadow: 0 0 7px black, 0 0 9px red;text-align:center;margin-up:10px">
+<b><i>
+ROCK <img src="rock.png" width="40px" height="40px" alt="Image Here" style="border-radius:50px"> 
+PAPER <img src="paper.jpg" width="40px" height="40px" alt="Image Here" style="border-radius:50px">  
+SCISSORS <img src="scissor.png" width="40px" height="40px" alt="Image Here" style="border-radius:50px"> 
+</i></b>
+</h1>
+
+
+<div style="text-align:center;font-family:MERRIWEATHER;font-size:50px;color:#151B54"><b><i>
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+</i>
+</b>
+</div>
+
+<center><button onclick="window.location.reload()" class="btn info" style="text-decoration:none;color:white"><b>PLAY AGAIN</b></button></center>
+
+<script>
+
+var userChoice1 = prompt("What do you choose rock, paper or scissors?");
+
+var userChoice=userChoice1.toLowerCase().trim();
+
+var compChoice = Math.random();
+
+if (compChoice < 0.33) {
+    compChoice = "rock";
+	}
+	
+else if(compChoice <= 0.66) {
+    compChoice = "paper";
+	} 
+	
+else {
+    compChoice = "scissors";
+    }
+
+
+function Result(c1, c2) {
+
+    if(c1==""){
+	return "You Have not entered any choice!!!";
+	};
+
+    if (c1!=="rock" && c1!=="paper" && c1!=="scissors"){
+	     return "You Have Entered the wrong Choice!!!";
+	}
+
+    if(c1 === c2) {
+    return "The result is a tie!";
+}
+
+if(c1 === "rock") {
+    if(c2 === "scissors") {
+        return "rock wins";
+    } 
+	
+	else {
+        return "paper wins";
+    }
+}
+
+if(c1 === "paper") {
+
+    if(c2 === "rock") {
+        return "paper wins";
+    } 
+	
+	else {
+            return "scissors wins";
+	}	
+    
+}
+
+if(c1 === "scissors") {
+    if(c2 === "rock") {
+        return "rock wins";
+    } 
+	else {
+            return "scissors wins";
+        }
+    
+}
+
+};
+
+document.getElementById("p2").innerHTML="Computer Choice: " + compChoice;
+var x=Result(userChoice, compChoice);
+document.getElementById("p1").innerHTML="Result: "+x;
+if(userChoice==""){
+document.getElementById("p2").innerHTML="User's Choice: No Choice Entered";
+}
+else{
+document.getElementById("p2").innerHTML="User's Choice: " + userChoice;
+}
+
+
+
+document.getElementById("p3").innerHTML="Computer's Choice: " + compChoice;
+
+</script>
+
+</body>
+</html>
